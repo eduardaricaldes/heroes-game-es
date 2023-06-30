@@ -47,13 +47,11 @@ export default function HomeGame() {
       </Question>
       <ContainerContent>
         <ButtonContainer>
-          <Button>
-            {currentQuestion.answers.map((answer) => (
-              <button key={answer.id} onClick={() => handleAnswerClick(answer)}>
-                {answer.text}
-              </button>
-            ))}
-          </Button>
+          {currentQuestion.answers.map((answer) => (
+            <Button key={answer.id} onClick={() => handleAnswerClick(answer)}>
+              {answer.text}
+            </Button>
+          ))}
         </ButtonContainer>
       </ContainerContent>
     </InitContainer>
@@ -76,16 +74,44 @@ const ContainerContent = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
+
+  @media (max-width: 500px) {
+    padding: 0 20px;
+  }
+`;
+
+const Question = styled.div`
+  background-color: #000;
+  padding: 20px;
+  border: 4px solid #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+
+  @media (max-width: 500px) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 `;
 
 const Button = styled.button`
+  flex: 0 0 auto;
+  margin: 10px;
   border-radius: 50px;
   background-color: #fcd14e;
   width: 200px;
@@ -96,10 +122,9 @@ const Button = styled.button`
   font-weight: bold;
   position: relative;
   overflow: hidden;
-  margin: 10px;
 
   &:last-child {
-    margin-bottom: 0;
+    margin-right: 0;
   }
 
   &::before {
@@ -143,18 +168,9 @@ const Button = styled.button`
       filter: blur(40px);
     }
   }
-`;
 
-const Question = styled.div`
-  background-color: #000;
-  padding: 20px;
-  border: 4px solid #fff;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @media (max-width: 500px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 `;
