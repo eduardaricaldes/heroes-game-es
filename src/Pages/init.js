@@ -1,16 +1,33 @@
+import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link, useHistory } from "react-router-dom";
 
 import logo from "../assets/logoinit.png";
 
 export default function InitPage() {
+  // const history = useHistory();
+
+  // const handleStartGame = () => {
+  //   // Aqui você pode adicionar a lógica para começar o jogo a partir do banco de dados
+
+  //   // Exemplo: Chamada à API para iniciar o jogo
+  //   // axios.post("/api/start-game").then((response) => {
+  //   //   // Lógica para lidar com a resposta da API
+  //   //   history.push("/game"); // Redireciona para a rota do jogo
+  //   // }).catch((error) => {
+  //   //   // Lógica para lidar com erros
+  // onClick = { handleStartGame };
+  //   // });
+
+  //   // Exemplo: Iniciar o jogo localmente sem chamar uma API
+  //   history.push("/game"); // Redireciona para a rota do jogo
+  // };
+
   return (
     <InitContainer>
       <ContainerContent>
         <div className="buttons">
-          <Link to="/home-game">
-            <button>Iniciar</button>
-          </Link>
+          <button>Iniciar</button>
         </div>
       </ContainerContent>
     </InitContainer>
