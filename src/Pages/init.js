@@ -108,22 +108,4 @@ const ContainerContent = styled.div`
       filter: blur(40px);
     }
   }
-
-  @media (max-width: 768px) {
-    button {
-      width: 200px;
-      height: 80px;
-      margin-top: 240px;
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    button {
-      width: 150px;
-      height: 60px;
-      margin-top: 160px;
-      font-size: 14px;
-    }
-  }
 `;

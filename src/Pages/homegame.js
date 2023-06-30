@@ -89,11 +89,6 @@ const Question = styled.div`
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
-
-  @media (max-width: 500px) {
-    margin-bottom: 10px;
-    width: 100%;
-  }
 `;
 
 const ButtonContainer = styled.div`
@@ -102,11 +97,6 @@ const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
 `;
 
 const Button = styled.button`
@@ -167,10 +157,5 @@ const Button = styled.button`
       opacity: 0;
       filter: blur(40px);
     }
-  }
-
-  @media (max-width: 500px) {
-    width: 100%;
-    margin: 10px 0;
   }
 `;
