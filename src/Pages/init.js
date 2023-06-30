@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logoinit.png";
 
@@ -27,7 +27,9 @@ export default function InitPage() {
     <InitContainer>
       <ContainerContent>
         <div className="buttons">
-          <button>Iniciar</button>
+          <Link to="/home-game">
+            <button>Iniciar</button>
+          </Link>
         </div>
       </ContainerContent>
     </InitContainer>
