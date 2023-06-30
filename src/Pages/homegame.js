@@ -74,10 +74,6 @@ const ContainerContent = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
-
-  @media (max-width: 500px) {
-    padding: 0 20px;
-  }
 `;
 
 const Question = styled.div`
