@@ -1,0 +1,92 @@
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+import logo from "../assets/logoinit.png";
+
+export default function InitPage() {
+  return (
+    <InitContainer>
+      <ContainerContent>
+        <div className="buttons">
+          <Link to="/home-game">
+            <button>Iniciar</button>
+          </Link>
+        </div>
+      </ContainerContent>
+    </InitContainer>
+  );
+}
+
+const InitContainer = styled.div`
+  height: 100vh;
+  font-family: "Press Start 2P", cursive;
+  background-image: url(${logo});
+  background-size: cover;
+  background-position: center;
+  font-size: 20px;
+`;
+
+const ContainerContent = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  button {
+    border-radius: 50px;
+    background-color: #fcd14e;
+    margin-top: 340px;
+    width: 250px;
+    height: 100px;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.5;
+    filter: blur(20px);
+    transform: scale(2);
+  }
+
+  button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    opacity: 0.5;
+    filter: blur(40px);
+    animation: neon-glow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes neon-glow {
+    0% {
+      opacity: 0;
+      filter: blur(50px);
+    }
+    50% {
+      opacity: 1;
+      filter: blur(50px);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(40px);
+    }
+  }
+`;
